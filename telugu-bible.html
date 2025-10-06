@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu Bible • Praneeth Potnuru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .back {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .back:hover {
+            color: #1a1a1a;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.125rem;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back</a>
+
+    <header>
+        <h1>Telugu Bible</h1>
+        <p class="subtitle">Solo Designer/Developer • 2025 • Building in public</p>
+    </header>
+
+    <section>
+        <h2>The Problem</h2>
+        <p>My grandmother couldn't navigate existing Bible apps. Small text, confusing menus, and zero Telugu voice support made it impossible for her to use them independently.</p>
+
+        <h2>The Solution</h2>
+        <p>I built a voice-navigated Bible app specifically designed for elderly Telugu-speaking users. The entire project took 1 week, and I'm currently building in public—sharing progress via reels on Instagram, YouTube Shorts, and X.</p>
+
+        <h2>Key Features</h2>
+
+        <p><strong>AI Voice Navigation</strong></p>
+        <ul>
+            <li>Conversational Telugu commands: "మత్తయి మూడు పన్నెండు" navigates to Matthew 3:12</li>
+            <li>Powered by Gemini AI with extensive prompt engineering (300+ lines)</li>
+            <li>Handles corrections, incomplete requests, and validates against actual Bible structure</li>
+            <li>Supports Telugu, English, and mixed-language input</li>
+        </ul>
+
+        <p><strong>Elderly-Optimized UX</strong></p>
+        <ul>
+            <li>Adaptive typography: 14-28pt font size with live preview</li>
+            <li>Adjustable line spacing: 4-16pt for comfortable reading</li>
+            <li>Large touch targets and high-contrast verse numbers</li>
+            <li>Auto-saves reading position—picks up exactly where you left off</li>
+        </ul>
+
+        <p><strong>Cross-Platform</strong></p>
+        <ul>
+            <li>Native iOS (SwiftUI) and Android (Jetpack Compose)</li>
+            <li>Feature parity across both platforms</li>
+            <li>Identical UX patterns for consistency</li>
+        </ul>
+
+        <h2>Screenshots</h2>
+        <div class="images">
+            <img src="IMG_0300.PNG" alt="Reading settings with live preview of Telugu text showing font size and line spacing controls">
+            <img src="IMG_0301.PNG" alt="Appearance settings showing automatic, light, and dark mode options">
+            <img src="Simulator Screenshot - iPhone 17 - 2025-10-03 at 12.30.08.PNG" alt="Navigation drawer showing book list in Telugu">
+            <img src="Simulator Screenshot - iPhone 17 - 2025-10-03 at 12.30.30.PNG" alt="Voice navigation interface actively listening for Telugu commands">
+        </div>
+
+        <h2>Technical Highlights</h2>
+        <ul>
+            <li>Efficient parsing: First chapter loads instantly, rest loads in background</li>
+            <li>USFM format for Bible text ensures data consistency</li>
+            <li>Verse-level highlighting with visual feedback when navigation completes</li>
+            <li>Smart TTS formatting separates display text from speech text</li>
+        </ul>
+
+        <h2>Building in Public</h2>
+        <p>I'm documenting the entire journey—from design decisions to code challenges—through short-form video content. This app started as a personal project to help my grandmother, but it's become a case study in designing for accessibility and non-English-speaking users.</p>
+    </section>
+
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;">
+        <a href="index.html" class="back">← Back to home</a>
+    </footer>
+</body>
+</html>

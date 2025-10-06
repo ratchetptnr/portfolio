@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womp • Praneeth Potnuru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .back {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .back:hover {
+            color: #1a1a1a;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back</a>
+
+    <header>
+        <h1>Womp</h1>
+        <p class="subtitle">Product Designer • 2021-2025</p>
+    </header>
+
+    <section>
+        <h2>Overview</h2>
+        <p>Product designer who helped build Womp from the ground up to 500k users. Designed the creator economy, community platform, and 3D printing flow that now serves enterprise clients like Meta, Dell, and Intuit. Navigated constant tradeoffs between business goals, technical constraints, and user needs to ship working products.</p>
+
+        <h2>Community & Creator Economy</h2>
+        <p>Built systems to make Womp feel like a happening place and help creators monetize their skills.</p>
+        <ul>
+            <li>Discover page - surfaced trending work and made Womp feel active</li>
+            <li>Events system - community-driven competitions to increase engagement</li>
+            <li>Hire Creators - verified creator marketplace for users to commission work</li>
+            <li>Leaderboard - gamified competition to drive activity</li>
+            <li>Badges system - milestone rewards (first publish, 100 likes, etc.)</li>
+            <li>Social features - post projects, likes, comments (Instagram for 3D)</li>
+            <li>Full in-app chat system for collaboration</li>
+        </ul>
+
+        <h2>Core Product Features</h2>
+        <p>Designed foundational tools and interactions within SDF rendering constraints.</p>
+
+        <p><strong>Multiple Cameras</strong><br>
+        Users needed to view their 3D work from different angles without losing their current perspective. Designed a multi-camera system that let users save and switch between viewpoints instantly. This was one of my smoothest projects—minimal pushback, clear vision, shipped with little iteration.</p>
+
+        <p><strong>Scene List Nesting</strong><br>
+        Early Womp had a flat scene list. As projects grew complex, users struggled to manage dozens of objects in one endless list. We evolved it to support 6 layers of nesting so users could organize hierarchically (e.g., "Car > Body > Door > Handle"). This also became a monetization lever—3 levels free, 4+ requires Pro.</p>
+
+        <p><strong>Other Features</strong></p>
+        <ul>
+            <li>Curves - Bezier curves in 3D space (massive technical lift)</li>
+            <li>3D Type - typing in three-dimensional space</li>
+            <li>Freehand 3D drawing</li>
+            <li>Mirror functionalities</li>
+            <li>Library system - upload and reuse meshes/fonts across projects</li>
+            <li>Share sheet with permission handling</li>
+        </ul>
+
+        <h2>3D Printing</h2>
+        <p>Designed the full printing experience from concept to order.</p>
+
+        <p><strong>The Economics Problem</strong><br>
+        Our 3D printing tech was high-quality but expensive. A solid print could cost 5-10x more than users expected, scaring them away. Solution: Show all prints with 2.5mm hollow thickness by default. Made prints affordable while maintaining structural integrity. This single decision made the difference between "too expensive" and "I'll order."</p>
+
+        <p><strong>3D Printing Mini-App</strong><br>
+        Users wanted to prep prints without opening a full Womp project. Built a standalone flow: upload mesh, configure print settings, order. Removed all the friction of navigating the main editor just to export a file.</p>
+
+        <p><strong>Complete Print Flow</strong><br>
+        Designed end-to-end experience from design → prep → order → delivery. This work helped Womp attract enterprise clients for office installations and custom projects.</p>
+
+        <h2>Education & AI</h2>
+        <p>Created learning systems and AI support to reduce friction for new users.</p>
+
+        <p><strong>Interactive Mini-Games</strong><br>
+        New users struggled with 3D navigation (rotating, panning, zooming in 3D space). Built interactive mini-games that taught these fundamentals through play rather than documentation. Conducted 50+ personal user testing calls—one-on-one sessions where I watched users struggle, took notes, and iterated. This hands-on research directly shaped the teaching flow.</p>
+
+        <p><strong>RAG-Powered AI Help Bot</strong><br>
+        Womp was growing fast and support couldn't keep up. Built an AI help bot that could answer any Womp question. I prepped all the documentation because I was in a unique position—I'd been involved in every feature shipped, either fully or partially. Knew the edge cases, the limitations, the workarounds.</p>
+
+        <p><strong>Other Education UX</strong></p>
+        <ul>
+            <li>Proactive messaging about server location impact on video quality (US/Europe servers = smooth, distant users = pixelated stream)</li>
+        </ul>
+
+        <h2>Complex Technical UX</h2>
+        <p>Solved UX challenges around technical limitations and performance constraints.</p>
+
+        <p><strong>Import Flow & Limits</strong><br>
+        Womp uses SDF rendering, which means imported meshes need conversion—a solid 1-minute wait. Designed feedback that kept users informed during the conversion. Also built guardrails: files can't exceed 1024 individual meshes or the app crashes. Created educational messaging that blocks risky imports and explains why, rather than letting users hit a wall.</p>
+
+        <p><strong>Project Health System</strong><br>
+        SDF rendering works on a voxel(3D pixel) budget. If you use all available voxels on one complex object, other objects in your scene start to deteriorate visually. Instead of auto-managing this (which limits creativity), I designed a health system that shows users where voxels are going and lets them fix it themselves. Gives users control while preventing technical disasters.</p>
+
+        <p><strong>Multiplayer Constraints</strong><br>
+        Everyone assumes multiplayer = Figma (unlimited simultaneous editors). Not at Womp. Our tech allowed 8 live viewers but only 4 could edit simultaneously. Had to design permissions, live cursors, and messaging that made this constraint clear without feeling limited. Not as simple as copying Figma's patterns.</p>
+
+        <p><strong>Turning Constraints Into Features</strong><br>
+        Scene list order limitation (objects below affect objects above) was initially confusing. Repackaged it as a teaching: "Don't understand what's cutting into your object? Check what's underneath it." Turned a technical constraint into a mental model users could grasp.</p>
+
+        <h2>The Reality</h2>
+        <p>This wasn't clean feature work, it was constant navigation between business needs, engineering constraints, and user problems. Every feature was a battle to ship <em>something</em> that worked. We prioritized shipping over polish.</p>
+
+        <p>I don't think of individual features as "mine" because everything required working across a 3-person product team, aligning with business goals, and negotiating with engineering. But the features where I had least pushback and most ownership—multiple cameras, scene list nesting—shipped smoothly because the team aligned on the vision.</p>
+    </section>
+
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;">
+        <a href="index.html" class="back">← Back to home</a>
+    </footer>
+</body>
+</html>
