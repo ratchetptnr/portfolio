@@ -152,23 +152,19 @@
 
             .skills {
                 display: block;
+                columns: 2;
+                column-gap: 2rem;
             }
 
             .skill-tag {
-                display: inline;
+                display: list-item;
+                list-style: disc inside;
                 background: none;
                 padding: 0;
+                margin-bottom: 0.3rem;
                 border-radius: 0;
                 color: #1a1a1a;
-            }
-
-            .skill-tag:after {
-                content: " • ";
-                color: #666;
-            }
-
-            .skill-tag:last-child:after {
-                content: "";
+                page-break-inside: avoid;
             }
         }
 
