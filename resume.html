@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume • Praneeth Potnuru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #1a1a1a;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .job {
+            margin-bottom: 2rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .job-company {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .job-dates {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.4rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #f5f5f5;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            color: #333;
+        }
+
+        .back {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back:hover {
+            color: #1a1a1a;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .back {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info a {
+                text-decoration: none;
+                color: #1a1a1a;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .job-dates {
+                margin-top: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back to portfolio</a>
+
+    <header>
+        <h1>Praneeth Potnuru</h1>
+        <div class="contact-info">
+            <a href="mailto:ratchet.ptnr@gmail.com">ratchet.ptnr@gmail.com</a>
+            <a href="https://ratchetptnr.github.io/portfolio" target="_blank">Portfolio</a>
+            <a href="https://www.linkedin.com/in/praneeth-potnuru-2b62b618b/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/ratchet__tweets" target="_blank">X</a>
+        </div>
+        <div style="margin-top: 0.5rem; color: #666; font-size: 0.95rem;">Product Designer • Visakhapatnam, India</div>
+    </header>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Product Designer</div>
+                    <div class="job-company">Womp</div>
+                </div>
+                <div class="job-dates">2021 - 2025</div>
+            </div>
+            <ul>
+                <li>Helped build browser-based 3D design tool from the ground up to 500k users and 256k Instagram followers</li>
+                <li>Designed creator economy (hire creators, events, leaderboard, badges) and community platform (social features, chat)</li>
+                <li>Built 3D printing flow serving enterprise clients, including hollow print optimization that made prints 5-10x more affordable</li>
+                <li>Conducted 50+ personal user testing calls and created interactive mini-games for teaching 3D navigation</li>
+                <li>Shipped multiple cameras, scene list nesting (6 layers, monetized at level 4+), curves, 3D type, library system</li>
+                <li>Designed RAG-powered AI help bot and prepped all documentation (involved in every feature shipped)</li>
+                <li>Solved complex technical UX: import flows with mesh→SDF conversion, project health system for voxel budgets, multiplayer constraints (8 viewers, 4 editors)</li>
+                <li>Navigated constant tradeoffs between business goals, engineering constraints, and user needs in 3-person product team</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Solo Designer/Developer</div>
+                    <div class="job-company">Telugu Bible (Personal Project)</div>
+                </div>
+                <div class="job-dates">2025</div>
+            </div>
+            <ul>
+                <li>Built voice-navigated Bible app for Telugu-speaking grandmother in 1 week</li>
+                <li>Designed AI voice navigation handling conversational Telugu/English/mixed commands with Gemini AI</li>
+                <li>Created elderly-optimized UX: adaptive typography (14-28pt), adjustable line spacing, large touch targets, auto-save position</li>
+                <li>Shipped cross-platform (iOS + Android) with feature parity using SwiftUI and Jetpack Compose</li>
+                <li>Building in public across Instagram, YouTube Shorts, and X (~1.5k views across platforms)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <span class="skill-tag">Product Design</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">Constraint-Driven Design</span>
+            <span class="skill-tag">Design Systems (Radix UI)</span>
+            <span class="skill-tag">Cross-Platform Design</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">Jetpack Compose</span>
+            <span class="skill-tag">AI/ML Integration</span>
+            <span class="skill-tag">Community Building</span>
+            <span class="skill-tag">Monetization Strategy</span>
+            <span class="skill-tag">Adobe Illustrator</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-company">Bachelor of Engineering • Computer Science</div>
+                </div>
+                <div class="job-dates">India</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
