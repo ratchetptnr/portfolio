@@ -149,6 +149,27 @@
                 text-decoration: none;
                 color: #1a1a1a;
             }
+
+            .skills {
+                display: block;
+            }
+
+            .skill-tag {
+                display: inline;
+                background: none;
+                padding: 0;
+                border-radius: 0;
+                color: #1a1a1a;
+            }
+
+            .skill-tag:after {
+                content: " • ";
+                color: #666;
+            }
+
+            .skill-tag:last-child:after {
+                content: "";
+            }
         }
 
         @media (max-width: 640px) {
