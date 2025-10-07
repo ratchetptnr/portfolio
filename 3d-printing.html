@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing at Womp • Praneeth Potnuru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .back {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .back:hover {
+            color: #1a1a1a;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            margin-left: 0;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .highlight-box {
+            background: #f8f8f8;
+            border-left: 3px solid #1a1a1a;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .step {
+            margin-bottom: 2.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e5e5e5;
+        }
+
+        .step h3 {
+            margin-top: 0;
+        }
+
+        .image-placeholder {
+            background: #f5f5f5;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #999;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="womp.html" class="back">← Back to Womp</a>
+
+    <header>
+        <h1>3D Printing at Womp</h1>
+        <p class="subtitle">Making 3D printing accessible to everyone • 2023-2024</p>
+    </header>
+
+    <section>
+        <h2>The Business Challenge</h2>
+        <p>Womp started as a browser-based 3D creation tool with live rendering. We'd introduced Pro subscriptions, and the next business opportunity was 3D printing. Our CEO had deep experience in 3D printing and knew exactly how complicated it was—and how many ways it could go wrong.</p>
+
+        <div class="highlight-box">
+            <p><strong>The core problem:</strong> How do we make normal people feel confident enough to order their first 3D print?</p>
+        </div>
+
+        <h2>Understanding the Stigma</h2>
+        <p>3D printing has an inherent complexity problem that scares away casual users:</p>
+        <ul>
+            <li>Extensive pre-processing required (support structures, object separation issues)</li>
+            <li>Post-processing work (cutting attachments, sanding for smooth finish)</li>
+            <li>Many technical ways a print can fail</li>
+            <li>Public perception: "3D printing is hard and only for technical people"</li>
+        </ul>
+
+        <h3>Finding the Right Technology</h3>
+        <p>Our CEO went to China to research print providers and found an SLA printing company. Unlike the FDM printing most people know (layer-by-layer, looks like Minecraft items), SLA produces soft, clean prints with no post-processing required. This was our first advantage—we could deliver quality without the usual complexity.</p>
+
+        <h2>Design Assumption</h2>
+        <p>We needed to <strong>handhold users through every step</strong> of print preparation, building confidence as they progressed.</p>
+
+        <h2>The Solution: A Mode-Based Flow</h2>
+
+        <h3>Why a "mode"?</h3>
+        <p>We needed to show a live preview of the print using our 3D canvas, but we had to hide all other objects and focus only on what's being printed. A dedicated "3D Print Mode" let us repurpose the canvas and transform the right panel from property controls into a step-by-step guide.</p>
+
+        <p>Users could enter two ways:</p>
+        <ul>
+            <li>Select an object first, then toggle to Print Mode</li>
+            <li>Toggle to Print Mode, then select an object (we'd prompt them)</li>
+        </ul>
+
+        <div class="image-placeholder">
+            [Screenshot: Segmented control toggle and mode interface]
+        </div>
+
+        <h2>The Step-by-Step Flow</h2>
+
+        <div class="step">
+            <h3>Step 0: Building Confidence</h3>
+            <p>Before users even select an object, we had to convince them that <em>they</em> could print and get good results. Step 0 showed beautiful examples of prints and prompted users to "pick an object from your scene list."</p>
+            <div class="image-placeholder">
+                [Screenshot: Step 0 with print examples and messaging]
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>The Pricing Problem</h3>
+            <p>When we started showing price estimates, we hit a major issue: we couldn't control what users made or how big they scaled it. Users were seeing $50-$80 prices (before shipping) and dropping off immediately.</p>
+
+            <p><strong>Our solution:</strong> Show the price of a <em>hollow</em> print by default (2.5mm thickness), not solid. We framed it as a recommendation: "We encourage hollow to use less material, less price, less weight to ship—and it still looks the same."</p>
+
+            <p>This single pricing decision made the difference between "too expensive, I'm out" and "okay, let's keep going."</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 1: Choose Material</h3>
+            <p>Users picked from solid white (cheapest), clear, or colored clear. Throughout every step, we showed the effective price at the bottom—and two prices: one for regular users, one for Pro users (10% discount). This planted the Pro upsell seed early.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Set Scale</h3>
+            <p>Size matters in print prep, not just design. We let users see dimensions in multiple units so anyone could estimate. And we added something delightful: a "Banana for scale" toggle that placed an average-sized banana next to their object.</p>
+
+            <p>At this step, we also showed:</p>
+            <ul>
+                <li>Estimated price at 2.5mm hollow thickness</li>
+                <li>Pro vs non-Pro pricing comparison</li>
+                <li>Example photos of physical prints</li>
+                <li>"Order before [time] to get it by [date]" urgency messaging</li>
+            </ul>
+
+            <div class="image-placeholder">
+                [Screenshot: Banana for scale feature]
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Print Style (Solid or Hollow) + X-Ray View</h3>
+            <p>This was the most technically complex step. Hollow prints have nuances:</p>
+            <ul>
+                <li>Minimum thickness below which the print physically can't work</li>
+                <li>At certain scales, walls must be thick enough to support the object's weight</li>
+            </ul>
+
+            <p><strong>X-Ray View:</strong> When users entered this step, the entire canvas switched to X-ray mode, revealing thin areas. We implemented a "structural health" system with color coding:</p>
+            <ul>
+                <li><strong>Red:</strong> Too thin, won't support itself</li>
+                <li><strong>Yellow:</strong> Math checks out, but we can't guarantee success</li>
+                <li><strong>Gray:</strong> All good, structurally sound</li>
+            </ul>
+
+            <p>As users moved the thickness slider, the object's color changed in risky regions, giving immediate feedback.</p>
+
+            <div class="image-placeholder">
+                [Screenshot: X-ray view with red/yellow/gray structural health indicators]
+            </div>
+
+            <h3>Monetization: Hollow = Pro Feature</h3>
+            <p>Here's where our pricing strategy came together. A solid print might cost $300, but at 2.5mm hollow thickness, it's $50. Add Pro for $20/month and you're at $70—still saving $230. Why not upgrade?</p>
+
+            <p>Non-Pro users who applied hollow and clicked next saw a prompt to add Pro to cart. They could say "I'll add it later" to see the final net cost, giving them choice rather than forcing the decision.</p>
+
+            <div class="image-placeholder">
+                [Screenshot: Price comparison showing solid vs hollow + Pro upsell]
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Drain Holes (Hollow Prints Only)</h3>
+            <p>Hollow prints need drain holes so excess material can escape. Each air pocket requires a hole, but the technology to auto-detect pockets doesn't exist. We could let the print service place them, but then we couldn't guarantee placement.</p>
+
+            <p><strong>Magnet-like UX:</strong> When users clicked "Add a drain hole," the cursor changed. As they moved near the object, they'd see exactly where the hole would be placed. Our system calculated it automatically—always perpendicular, always penetrating the air pocket—taking the complexity away from users.</p>
+
+            <p>This wasn't mandatory. Users could skip it, but we warned: "If you don't add holes, the printer will—and we can't guarantee where."</p>
+
+            <p>In testing, users immediately understood. "Yeah, that makes sense."</p>
+
+            <div class="image-placeholder">
+                [Screenshot: Drain hole placement UI with magnet cursor]
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Final Checks</h3>
+            <p>We showed a checklist:</p>
+            <ul>
+                <li>Size is correct</li>
+                <li>Hollow thickness has no warnings</li>
+                <li>Drain holes placed for every air pocket</li>
+            </ul>
+
+            <p>Then: back to print preview. From here, users could add to cart.</p>
+
+            <p>Non-Pro users who hadn't added Pro yet hit a block. A modal explained: add Pro to cart or change your order to solid. No surprises, clear choices.</p>
+
+            <p>After cart: enter address, place order. A dedicated tracking page let users monitor their print—and cancel within 2 hours (before machines start and material is wasted). We communicated this in the cart with subtle text, careful not to scare users with aggressive warnings.</p>
+        </div>
+
+        <h2>Edge Cases & Technical Constraints</h2>
+
+        <h3>Going Backwards Loses Progress</h3>
+        <p>If a user placed drain holes and then went back to change the object's scale, the holes would no longer align. We warned them: "If you do this, you'll lose your drain holes." Users understood the trade-off.</p>
+
+        <h3>The Hollow Recalculation Problem</h3>
+        <p>Hollow rendering wasn't real-time. If we let users change scale on the fly while hollow was applied, it would crash the 3D engine. We had to warn users they'd lose their thickness value if they went back.</p>
+
+        <p>A year later, a graphics engineer solved it—but by then I was working on AI integration and got let go before we could implement it.</p>
+
+        <h3>The Hardest Part</h3>
+        <p>The happy path was straightforward. The real challenge was designing a system that could catch every possible way a user might navigate backwards, skip steps, or make conflicting choices—without making the flow feel restrictive.</p>
+
+        <p>After a year live, the most common feedback was: "It feels restrictive." I'd designed a solution to open it up, but it's not live yet.</p>
+
+        <h2>Clear Prints: A Different Flow</h2>
+        <p>For clear material, we discouraged hollow prints. The printer adds internal support structures for integrity, and those are visible through clear material—looks bad. We still allowed it; it was just a suggestion. Users could choose.</p>
+
+        <h2>The Mini-App</h2>
+        <p>Not everyone creates in Womp. Some users have meshes made elsewhere. We built a mini-app right in the homepage hero: click, upload a mesh, and it opens in a temporary project. All the print prep steps happen in a modal—no need to navigate projects or learn the editor. Just upload, prep, order.</p>
+
+        <h2>Impact</h2>
+        <p>After launch, Womp became known as a 3D printing service. Social content exploded around clear earrings and keychains. Demand was so high, we created premade items users could order instantly without going through the prep flow.</p>
+
+        <p>Print orders increased significantly. We attracted enterprise clients for custom office installations.</p>
+
+        <h2>What I Learned</h2>
+
+        <h3>Pricing Psychology Matters</h3>
+        <p>Showing hollow pricing by default wasn't dishonest—it was reframing. Users got the same quality for less money and less environmental waste. But the framing made the difference between bounce and conversion.</p>
+
+        <h3>Constraints Force Creativity</h3>
+        <p>We couldn't build real-time hollow recalculation, so we warned users about losing progress. We couldn't auto-detect air pockets, so we built a delightful manual tool. Every constraint became a design opportunity.</p>
+
+        <h3>Edge Cases Are Where Design Happens</h3>
+        <p>The happy path is easy. Real design is handling the user who goes backwards, changes their mind, or wants to do something the system wasn't built for—without breaking or frustrating them.</p>
+
+        <h3>Small Delights Build Confidence</h3>
+        <p>"Banana for scale" was silly and functional. X-ray view was technical and beautiful. These moments made users feel like we cared about their experience, not just extracting money.</p>
+    </section>
+
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;">
+        <a href="womp.html" class="back">← Back to Womp</a>
+    </footer>
+</body>
+</html>
