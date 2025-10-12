@@ -169,6 +169,58 @@
             text-decoration: underline;
         }
 
+        .early-work-accordion {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .early-work-accordion summary {
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .early-work-accordion summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .early-work-accordion summary h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            flex: 1;
+        }
+
+        .early-work-accordion summary:hover h2 {
+            color: #666;
+        }
+
+        .early-work-accordion summary::after {
+            content: "▾";
+            font-size: 1.25rem;
+            color: #666;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .early-work-accordion:not([open]) summary::after {
+            content: "▸";
+        }
+
+        .summary-subtitle {
+            display: block;
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .early-work-content {
+            margin-top: 2rem;
+        }
+
         @media (max-width: 640px) {
             body {
                 padding: 40px 20px;
@@ -204,7 +256,7 @@
     </section>
 
     <section class="work">
-        <h2>Work</h2>
+        <h2>Product Design</h2>
 
         <div class="project">
             <div class="project-header">
@@ -229,6 +281,57 @@
             <span style="color: #ccc; margin: 0 0.5rem;">•</span>
             <a href="https://ratchetptnr.github.io/simple-telugu-bible/" target="_blank" class="read-more">Visit website →</a>
         </div>
+
+        <details class="early-work-accordion">
+            <summary>
+                <div>
+                    <h2>Early Work</h2>
+                    <span class="summary-subtitle">Brand and graphic design (2019-2021)</span>
+                </div>
+            </summary>
+
+            <div class="early-work-content">
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Wyugen (now Waywen)<span class="project-years">(Feb 2021 - Oct 2021)</span></h3>
+                        <p class="role">Founding Designer • Luxury fashion brand</p>
+                    </div>
+
+                    <p class="description">Built brand identity from scratch for a luxury sneaker brand inspired by Japanese aesthetics. Led discovery process, created logo system designed for footwear application, developed packaging and brand messaging. The aesthetic foundation I established continues to influence the brand today.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Kimp<span class="project-years">(Oct 2020 - Apr 2021)</span></h3>
+                        <p class="role">Graphic Designer • Service-based design company</p>
+                    </div>
+
+                    <p class="description">Worked with small businesses across North America (restaurants, construction, medical practices, retail). Delivered 6+ design tasks daily with rapid turnarounds—logos, social media graphics, posters, seasonal campaigns. High-volume client work with 4+ design options per brief.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Coffee & Donut<span class="project-years">(2019-2021)</span></h3>
+                        <p class="role">Co-Founder • Design studio</p>
+                    </div>
+
+                    <p class="description">Co-founded design studio with four university friends. Led branding and identity work for university clients, local businesses, and crypto startups. Notable projects: Knots and Tales, Andhra Pradesh Natural History Park, TEDxBMU, and Pink Panda (crypto app branding).</p>
+
+                    <a href="coffee-and-donut.html" class="read-more">View projects →</a>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">ratchet_scribbles<span class="project-years">(2020)</span></h3>
+                        <p class="role">Personal Project • Daily art practice</p>
+                    </div>
+
+                    <p class="description">62-day daily poster challenge during COVID lockdown. Drew on top of Unsplash photography to create visual compositions. Posted daily on Instagram as a creative discipline practice.</p>
+
+                    <a href="ratchet-scribbles.html" class="read-more">View work →</a>
+                </div>
+            </div>
+        </details>
     </section>
 
     <footer class="contact">
